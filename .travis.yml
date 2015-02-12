@@ -1,1 +1,4 @@
 language: objective-c
+
+xcode_workspace: Rubis.xcworkspace
+xcode_scheme: Rubis
