@@ -32,7 +32,7 @@
 }
 
 - (id)listViewController
-{   
+{
     return [TyphoonDefinition withFactory:[self listViewStoryboard] selector:@selector(instantiateInitialViewController)];
 }
 
