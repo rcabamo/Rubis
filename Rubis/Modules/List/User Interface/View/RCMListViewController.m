@@ -67,7 +67,18 @@ const CGFloat kScaleBoundUpper = 2.0;
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TrainingCollectionCell" forIndexPath:indexPath];
     
     // Alternate cells between red and blue
-    cell.backgroundColor = (indexPath.row % 2) ? [UIColor colorWithRed:0.988 green:0.266 blue:0.079 alpha:1.000] : [UIColor colorWithRed:0.069 green:0.531 blue:0.750 alpha:1.000];
+    UIColor *color;
+    if (indexPath.row % 3 == 0) {
+        color = [UIColor colorWithRed:0.988 green:0.266 blue:0.079 alpha:1.000];
+    }
+    else if (indexPath.row % 3 == 1) {
+        color = [UIColor colorWithRed:0.069 green:0.531 blue:0.750 alpha:1.000];
+    }
+    else if (indexPath.row % 3 == 2) {
+        color = [UIColor colorWithRed:0.976 green:0.002 blue:0.117 alpha:1.000];
+    }
+
+    cell.backgroundColor = color;
     
     return cell;
 }
