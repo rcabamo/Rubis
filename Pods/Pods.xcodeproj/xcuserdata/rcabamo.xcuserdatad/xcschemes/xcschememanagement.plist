@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Rubis-Typhoon.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Rubis-libextobjc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>38C5D841B4EA67BF47E3DC22</key>
+		<key>1B824DC9F53436A78FF7A2D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>502D9067946E8871857C8ED6</key>
+		<key>2DD4B343641CE9A7BEE75C29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>705C4F511BA05E26DAAAF3A3</key>
+		<key>5BF0CA10DFA1C979D1DB3A29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B0E14D5300FE6DB66821B2DC</key>
+		<key>9D4CD9794E3D879F3352EB69</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F8B4D19FFB0863A60168A3A2</key>
+		<key>A3D92967B2C606DF968EFEFA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EDE8EEC90B108BDA66507DD0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

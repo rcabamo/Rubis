@@ -8,7 +8,11 @@
 
 #import "AppDelegate.h"
 
+#import "RCMTrainingListWireframe.h"
+
 @interface AppDelegate ()
+
+@property (nonatomic, strong) RCMTrainingListWireframe *listWireframe;
 
 @end
 
@@ -16,8 +20,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.tintColor = [UIColor darkGrayColor];
+    
+    [self.listWireframe presentListInterfaceFromWindow:self.window];
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+- (RCMTrainingListWireframe *)listWireframe
+{
+    if (!_listWireframe) {
+        _listWireframe = [[RCMTrainingListWireframe alloc] init];
+    }
+    
+    return _listWireframe;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

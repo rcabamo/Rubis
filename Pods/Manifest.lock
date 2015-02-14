@@ -4,15 +4,20 @@ PODS:
   - libextobjc/RuntimeExtensions (HEAD based on 0.4.1)
   - OCMock (3.1.2)
   - Reveal-iOS-SDK (1.5.0)
+  - Typhoon (2.3.4):
+    - Typhoon/no-arc (= 2.3.4)
+  - Typhoon/no-arc (2.3.4)
 
 DEPENDENCIES:
   - libextobjc/EXTScope (HEAD)
   - OCMock (~> 3.1.2)
   - Reveal-iOS-SDK
+  - Typhoon (~> 2.3.4)
 
 SPEC CHECKSUMS:
   libextobjc: d6146fce3ebea986b7f75fcb4c967639200b88b0
   OCMock: ecdd510b73ef397f2f97274785c1e87fd147c49f
   Reveal-iOS-SDK: b6d94eb78d84ebd2e3182063577975561cd6dbd9
+  Typhoon: 57aae183beb36a386017a2cc69b18e29d7a21730
 
 COCOAPODS: 0.35.0
