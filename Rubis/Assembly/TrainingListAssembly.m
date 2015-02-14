@@ -27,15 +27,13 @@
 {
     return [TyphoonDefinition withClass:[RCMTrainingListWireframe class] configuration:^(TyphoonDefinition *definition) {
         [definition injectProperty:@selector(rootWireframe) with:[self.applicationAssembly rootWireframe]];
-        [definition injectProperty:@selector(listViewController) with:[self.applicationAssembly rootWireframe]];
+        [definition injectProperty:@selector(listViewController) with:[self listViewController]];
     }];
 }
 
 - (id)listViewController
-{
-    return [TyphoonDefinition withClass:[RCMListViewController class] configuration:^(TyphoonDefinition *definition) {
-        [definition useInitializer:@selector(instantiateInitialViewController)];
-    }];
+{   
+    return [TyphoonDefinition withFactory:[self listViewStoryboard] selector:@selector(instantiateInitialViewController)];
 }
 
 - (id)listViewStoryboard
@@ -46,6 +44,8 @@
             [initializer injectParameterWith:self];
             [initializer injectParameterWith:[NSBundle mainBundle]];
         }];
+        
+        definition.scope = TyphoonScopeSingleton;
     }];
 }
 

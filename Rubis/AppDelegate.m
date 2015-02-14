@@ -12,7 +12,7 @@
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) RCMTrainingListWireframe *listWireframe;
+
 
 @end
 
@@ -29,15 +29,6 @@
     [self.window makeKeyAndVisible];
     
     return YES;
-}
-
-- (RCMTrainingListWireframe *)listWireframe
-{
-    if (!_listWireframe) {
-        _listWireframe = [[RCMTrainingListWireframe alloc] init];
-    }
-    
-    return _listWireframe;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

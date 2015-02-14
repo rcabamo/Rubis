@@ -19,36 +19,6 @@
 
 @implementation RCMTrainingListWireframe
 
-- (instancetype)init
-{
-    if (self == [super init]) {
-        
-    }
-    
-    return self;
-}
-
-
-#pragma mark - Getters && Setters
-
-- (RCMRootWireframe *)rootWireframe
-{
-    if (!_rootWireframe) {
-        _rootWireframe = [[RCMRootWireframe alloc] init];
-    }
-    
-    return _rootWireframe;
-}
-
-- (RCMListViewController *)listViewController
-{
-    if (!_listViewController) {
-        _listViewController = [[UIStoryboard storyboardWithName:@"RCMListViewController" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
-    }
-    
-    return _listViewController;
-}
-
 - (void)presentListInterfaceFromWindow:(UIWindow *)window
 {
     [self.rootWireframe showRootViewController:self.listViewController inWindow:window];
