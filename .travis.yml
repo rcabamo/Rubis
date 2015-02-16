@@ -2,6 +2,3 @@ language: objective-c
 
 xcode_workspace: Rubis.xcworkspace
 xcode_scheme: Rubis
-
-script:
-  - xcodebuild [DEFAULT_OPTIONS] CODE_SIGNING_REQUIRED=NO
