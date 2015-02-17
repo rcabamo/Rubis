@@ -12,8 +12,11 @@
 		4A0BEA0D1A8CE4110046459B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0BEA0C1A8CE4110046459B /* Images.xcassets */; };
 		4A0BEA101A8CE4110046459B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0BEA0E1A8CE4110046459B /* LaunchScreen.xib */; };
 		4A0BEA1C1A8CE4110046459B /* RubisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BEA1B1A8CE4110046459B /* RubisTests.m */; };
+		4A4330E81A939A3600FFBEA4 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4330E61A939A3600FFBEA4 /* Crashlytics.framework */; };
+		4A4330E91A939A3600FFBEA4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4330E71A939A3600FFBEA4 /* Fabric.framework */; };
 		4A605DF71A8F55DF005E1199 /* ApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A605DF61A8F55DF005E1199 /* ApplicationAssembly.m */; };
 		4A605DFA1A8F577B005E1199 /* TrainingListAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A605DF91A8F577B005E1199 /* TrainingListAssembly.m */; };
+		4A605DFD1A907DBF005E1199 /* RCMListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A605DFC1A907DBF005E1199 /* RCMListCollectionViewCell.m */; };
 		4ACB4CF91A8F46D10086CAD9 /* RCMListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ACB4CF81A8F46D10086CAD9 /* RCMListViewController.storyboard */; };
 		4AE562321A8F3949000C4EAA /* RCMListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE562301A8F3949000C4EAA /* RCMListViewController.m */; };
 		4AE562391A8F3993000C4EAA /* RCMListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE562381A8F3993000C4EAA /* RCMListPresenter.m */; };
@@ -46,10 +49,14 @@
 		4A0BEA151A8CE4110046459B /* RubisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RubisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0BEA1A1A8CE4110046459B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A0BEA1B1A8CE4110046459B /* RubisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RubisTests.m; sourceTree = "<group>"; };
+		4A4330E61A939A3600FFBEA4 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		4A4330E71A939A3600FFBEA4 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		4A605DF51A8F55DF005E1199 /* ApplicationAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationAssembly.h; sourceTree = "<group>"; };
 		4A605DF61A8F55DF005E1199 /* ApplicationAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationAssembly.m; sourceTree = "<group>"; };
 		4A605DF81A8F577B005E1199 /* TrainingListAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainingListAssembly.h; sourceTree = "<group>"; };
 		4A605DF91A8F577B005E1199 /* TrainingListAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainingListAssembly.m; sourceTree = "<group>"; };
+		4A605DFB1A907DBF005E1199 /* RCMListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMListCollectionViewCell.h; sourceTree = "<group>"; };
+		4A605DFC1A907DBF005E1199 /* RCMListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMListCollectionViewCell.m; sourceTree = "<group>"; };
 		4ACB4CF81A8F46D10086CAD9 /* RCMListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RCMListViewController.storyboard; sourceTree = "<group>"; };
 		4AE5622F1A8F3949000C4EAA /* RCMListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMListViewController.h; sourceTree = "<group>"; };
 		4AE562301A8F3949000C4EAA /* RCMListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMListViewController.m; sourceTree = "<group>"; };
@@ -70,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4330E81A939A3600FFBEA4 /* Crashlytics.framework in Frameworks */,
+				4A4330E91A939A3600FFBEA4 /* Fabric.framework in Frameworks */,
 				9A775D93F2675E6E8298F69C /* libPods-Rubis.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +320,8 @@
 				4AE5622F1A8F3949000C4EAA /* RCMListViewController.h */,
 				4AE562301A8F3949000C4EAA /* RCMListViewController.m */,
 				4ACB4CF81A8F46D10086CAD9 /* RCMListViewController.storyboard */,
+				4A605DFB1A907DBF005E1199 /* RCMListCollectionViewCell.h */,
+				4A605DFC1A907DBF005E1199 /* RCMListCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,6 +349,8 @@
 		A14B35ECEE56C5A62021A5FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A4330E61A939A3600FFBEA4 /* Crashlytics.framework */,
+				4A4330E71A939A3600FFBEA4 /* Fabric.framework */,
 				0B36269811993EEB46872290 /* libPods-Rubis.a */,
 				598DEF1EC8CA53BC4CD064DD /* libPods-RubisTests.a */,
 			);
@@ -356,6 +369,7 @@
 				4A0BE9F91A8CE4110046459B /* Frameworks */,
 				4A0BE9FA1A8CE4110046459B /* Resources */,
 				33B7AB0AA0E6AAEC244CBD24 /* Copy Pods Resources */,
+				4A158DF31A939494006A59A1 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -474,6 +488,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RubisTests/Pods-RubisTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4A158DF31A939494006A59A1 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 801e9cb2195aabf4b9122bb3a40bb69a64565034 0427719203d4edfceab9524d0967f22ed72cc9826a7f71577c9e5210f5c59b98";
+		};
 		8E3FA8DA1209A8EF3FCD7CED /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -517,6 +545,7 @@
 				4A605DF71A8F55DF005E1199 /* ApplicationAssembly.m in Sources */,
 				4A0BEA051A8CE4110046459B /* AppDelegate.m in Sources */,
 				4AE562391A8F3993000C4EAA /* RCMListPresenter.m in Sources */,
+				4A605DFD1A907DBF005E1199 /* RCMListCollectionViewCell.m in Sources */,
 				4A0BEA021A8CE4110046459B /* main.m in Sources */,
 				4AE562321A8F3949000C4EAA /* RCMListViewController.m in Sources */,
 			);
@@ -633,6 +662,11 @@
 			baseConfigurationReference = F26B2C3B08B7C33FBDEF29B4 /* Pods-Rubis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Rubis/Frameworks",
+				);
 				INFOPLIST_FILE = Rubis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -644,6 +678,11 @@
 			baseConfigurationReference = F2C6BCA8239983439EADA51E /* Pods-Rubis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Rubis/Frameworks",
+				);
 				INFOPLIST_FILE = Rubis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

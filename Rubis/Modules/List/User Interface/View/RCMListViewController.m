@@ -8,6 +8,8 @@
 
 #import "RCMListViewController.h"
 
+#import "RCMListCollectionViewCell.h"
+
 const CGFloat kScaleBoundLower = 0.5;
 const CGFloat kScaleBoundUpper = 2.0;
 
@@ -29,8 +31,6 @@ const CGFloat kScaleBoundUpper = 2.0;
     
     // Default scale is the average between the lower and upper bound
     self.scale = (kScaleBoundUpper + kScaleBoundLower)/2.0;
-    
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"TrainingCollectionCell"];
     
     // Add the pinch to zoom gesture
     self.gesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(didReceivePinchGesture:)];
@@ -64,21 +64,9 @@ const CGFloat kScaleBoundUpper = 2.0;
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TrainingCollectionCell" forIndexPath:indexPath];
+    RCMListCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([RCMListCollectionViewCell class]) forIndexPath:indexPath];
     
-    // Alternate cells between red and blue
-    UIColor *color;
-    if (indexPath.row % 3 == 0) {
-        color = [UIColor colorWithRed:0.988 green:0.266 blue:0.079 alpha:1.000];
-    }
-    else if (indexPath.row % 3 == 1) {
-        color = [UIColor colorWithRed:0.069 green:0.531 blue:0.750 alpha:1.000];
-    }
-    else if (indexPath.row % 3 == 2) {
-        color = [UIColor colorWithRed:0.976 green:0.002 blue:0.117 alpha:1.000];
-    }
-
-    cell.backgroundColor = color;
+    [cell setDate:[NSDate date]];
     
     return cell;
 }
