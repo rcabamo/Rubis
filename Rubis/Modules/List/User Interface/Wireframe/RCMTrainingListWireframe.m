@@ -9,12 +9,15 @@
 #import "RCMTrainingListWireframe.h"
 
 #import "RCMRootWireframe.h"
-
+#import "RCMListPresenter.h"
 #import "RCMListViewController.h"
 
 @interface RCMTrainingListWireframe ()
+
+@property (nonatomic, strong) RCMListPresenter      *listPresenter;
 @property (nonatomic, strong) RCMRootWireframe      *rootWireframe;
 @property (nonatomic, strong) RCMListViewController *listViewController;
+
 @end
 
 @implementation RCMTrainingListWireframe

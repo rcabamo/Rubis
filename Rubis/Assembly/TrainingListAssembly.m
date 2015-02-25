@@ -26,9 +26,15 @@
 - (id)trainingListWireframe
 {
     return [TyphoonDefinition withClass:[RCMTrainingListWireframe class] configuration:^(TyphoonDefinition *definition) {
+        [definition injectProperty:@selector(listPresenter) with:nil];
         [definition injectProperty:@selector(rootWireframe) with:[self.applicationAssembly rootWireframe]];
         [definition injectProperty:@selector(listViewController) with:[self listViewController]];
     }];
+}
+
+- (id)listPresenter
+{
+    return [TyphoonDefinition withClass:[RCMListPresenter class]];
 }
 
 - (id)listViewController

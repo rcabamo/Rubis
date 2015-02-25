@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-Rubis-PureLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Rubis-Reveal-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1B824DC9F53436A78FF7A2D7</key>
+		<key>307E25B6D836C5CAA9F7B518</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2DD4B343641CE9A7BEE75C29</key>
+		<key>5691D855FB189DE4DCDAADE2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5BF0CA10DFA1C979D1DB3A29</key>
+		<key>74A44D19619F7488F2A87D2A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D4CD9794E3D879F3352EB69</key>
+		<key>9A1642AF3ABF4FEB4B6AD631</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A3D92967B2C606DF968EFEFA</key>
+		<key>A6179F82F485F830C831D022</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EDE8EEC90B108BDA66507DD0</key>
+		<key>DFAAA1940F123C6625B87A01</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E820CFF80334EB293F9A7EE5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

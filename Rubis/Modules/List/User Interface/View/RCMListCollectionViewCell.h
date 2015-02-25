@@ -10,12 +10,6 @@
 
 @interface RCMListCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, weak) IBOutlet UIView     *firstView;
-@property (nonatomic, weak) IBOutlet UIView     *centerView;
-@property (nonatomic, weak) IBOutlet UIView     *lastView;
-
-@property (nonatomic, weak) IBOutlet UILabel    *dateLabel;
-
 @property (nonatomic, strong) NSDate            *date;
 
 @end

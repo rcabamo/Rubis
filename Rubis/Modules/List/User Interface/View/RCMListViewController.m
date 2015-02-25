@@ -10,15 +10,16 @@
 
 #import "RCMListCollectionViewCell.h"
 
-const CGFloat kScaleBoundLower = 0.5;
-const CGFloat kScaleBoundUpper = 2.0;
+#import "UIColor+Theme.h"
+
+static int i = 0;
+NSInteger selectedIndex = 3;
+
 
 @interface RCMListViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, weak) IBOutlet UICollectionView   *collectionView;
-@property (nonatomic, strong) UIPinchGestureRecognizer  *gesture;
-@property (nonatomic,assign) CGFloat                    scale;
-
+//
 @end
 
 @implementation RCMListViewController
@@ -27,93 +28,67 @@ const CGFloat kScaleBoundUpper = 2.0;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.title = @"RCMListViewController";
+    self.title = NSStringFromClass([self class]);
+    self.navigationController.navigationBar.translucent = NO;
+    UINavigationBar *navigationBar = self.navigationController.navigationBar;
     
-    // Default scale is the average between the lower and upper bound
-    self.scale = (kScaleBoundUpper + kScaleBoundLower)/2.0;
+    [navigationBar setBackgroundImage:[UIImage new]
+                       forBarPosition:UIBarPositionAny
+                           barMetrics:UIBarMetricsDefault];
     
-    // Add the pinch to zoom gesture
-    self.gesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(didReceivePinchGesture:)];
-    [self.collectionView addGestureRecognizer:self.gesture];
+    [navigationBar setShadowImage:[UIImage new]];
+    self.navigationController.navigationBar.barTintColor = [UIColor rb_blackColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor rb_redColor]};
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 }
 
-
-#pragma mark - Accessors
-- (void)setScale:(CGFloat)scale
+- (void)viewDidAppear:(BOOL)animated
 {
-    // Make sure it doesn't go out of bounds
-    if (scale < kScaleBoundLower)
-    {
-        _scale = kScaleBoundLower;
-    }
-    else if (scale > kScaleBoundUpper)
-    {
-        _scale = kScaleBoundUpper;
-    }
-    else
-    {
-        _scale = scale;
-    }
+    [super viewDidAppear:animated];
+    
+//    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:5 inSection:0]   atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
 }
 
 #pragma mark - UICollectionViewDataSource
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 300;
+    return 10 + i;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     RCMListCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([RCMListCollectionViewCell class]) forIndexPath:indexPath];
     
-    [cell setDate:[NSDate date]];
+    cell.date = nil;
     
     return cell;
 }
 
 
-#pragma mark - UICollectionViewDelegateFlowLayout
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    // Main use of the scale property
-    CGFloat scaledWidth = 50 * self.scale;
-   return CGSizeMake(scaledWidth, CGRectGetHeight(self.collectionView.frame));
+    if (scrollView.contentOffset.x + CGRectGetWidth(self.collectionView.frame) + 50 > scrollView.contentSize.width) {
+        NSLog(@"Load new objects");
+        i += 5;
+        [self.collectionView reloadData];
+    }
 }
 
-
-#pragma mark - Gesture Recognizers
-- (void)didReceivePinchGesture:(UIPinchGestureRecognizer*)gesture
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    static CGFloat scaleStart;
+    NSArray *cells = self.collectionView.visibleCells;
     
-    if (gesture.state == UIGestureRecognizerStateBegan)
-    {
-        // Take an snapshot of the initial scale
-        scaleStart = self.scale;
-        return;
-    }
-    if (gesture.state == UIGestureRecognizerStateChanged)
-    {
-        // Apply the scale of the gesture to get the new scale
-        self.scale = scaleStart * gesture.scale;
-        
-        if (NO)
-        {
-            // Animated zooming (remove and re-add the gesture recognizer to prevent updates during the animation)
-            [self.collectionView removeGestureRecognizer:self.gesture];
-            UICollectionViewFlowLayout *newLayout = [[UICollectionViewFlowLayout alloc] init];
-            [self.collectionView setCollectionViewLayout:newLayout animated:YES completion:^(BOOL finished) {
-                [self.collectionView addGestureRecognizer:self.gesture];
-            }];
-        }
-        else
-        {
-            // Invalidate layout
-            [self.collectionView.collectionViewLayout invalidateLayout];
-        }
-    }
+    UICollectionViewCell *cell = cells[cells.count/2];
+    
+    [self.collectionView scrollToItemAtIndexPath:[self.collectionView indexPathForCell:cell] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
 }
-
-
 
 @end

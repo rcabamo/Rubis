@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9D4CD9794E3D879F3352EB69"
+               BlueprintIdentifier = "74A44D19619F7488F2A87D2A"
                BuildableName = "libPods-Rubis.a"
                BlueprintName = "Pods-Rubis"
                ReferencedContainer = "container:Pods.xcodeproj">

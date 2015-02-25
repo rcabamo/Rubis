@@ -8,6 +8,10 @@
 
 #import "RCMListCollectionViewCell.h"
 
+#import "UIColor+Theme.h"
+
+#import <PureLayout/PureLayout.h>
+
 @implementation RCMListCollectionViewCell
 
 - (void)setDate:(NSDate *)date
@@ -17,34 +21,80 @@
     [self updateUI];
 }
 
+- (void)updateConstraints
+{
+    
+    [self.contentView.subviews enumerateObjectsUsingBlock:^(UIView *view, NSUInteger index, BOOL *stop) {
+        view.translatesAutoresizingMaskIntoConstraints = NO;
+        view.backgroundColor = [self randomColor];
+        
+        // Height para cuando solo hay un elemento
+        if (self.contentView.subviews.count == 1) {
+            [view autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.contentView];
+        }
+        
+        // Vertical
+        if (index == 0) {
+            [view autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.contentView];
+        }
+        else {
+            [view autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.contentView.subviews[index - 1]];
+            [view autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.contentView.subviews[index - 1]];
+        }
+        
+        if (index == self.contentView.subviews.count - 1) {
+            [view autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.contentView];
+        }
+        
+        // Horizontal
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[view]|"
+                                                                                    options:0
+                                                                                    metrics:nil
+                                                                                      views:NSDictionaryOfVariableBindings(view)]];
+    }];
+    
+    [super updateConstraints];
+}
+
 - (void)updateUI
 {
-    self.firstView.backgroundColor  = [self randomColor];
-    self.centerView.backgroundColor = [self randomColor];
-    self.lastView.backgroundColor   = [self randomColor];
+    for (UIView *subview in self.contentView.subviews) {
+        [subview removeFromSuperview];
+    }
     
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"dd-MM-yy";
+    int views = (arc4random() % 3) + 1;
     
-    self.dateLabel.text = [dateFormatter stringFromDate:self.date];
+    for (int i =0; i < views; ++i) {
+        UIView *view = [UIView new];
+        view.backgroundColor = [UIColor redColor];
+        [self.contentView addSubview:view];
+    }
+    
+    [self setNeedsUpdateConstraints];
 }
 
 - (UIColor *)randomColor
 {
-    // Alternate cells between red and blue
-    int random = arc4random() % 3;
-    UIColor *color;
-    if (random == 0) {
-        color = [UIColor colorWithRed:0.988 green:0.266 blue:0.079 alpha:1.000];
-    }
-    else if (random == 1) {
-        color = [UIColor colorWithRed:0.069 green:0.531 blue:0.750 alpha:1.000];
-    }
-    else if (random == 2) {
-        color = [UIColor colorWithRed:0.976 green:0.002 blue:0.117 alpha:1.000];
-    }
+    int x = (arc4random() % 3) + 1;
     
-    return color;
+    switch (x) {
+        case 0:
+            return [UIColor rb_redColor];
+            break;
+            
+        case 1:
+            return [UIColor rb_blueColor];
+            break;
+            
+        case 2:
+            return [UIColor rb_orangeColor];
+            break;
+            
+        default:
+            return [UIColor grayColor];
+            break;
+    }
 }
+
 
 @end

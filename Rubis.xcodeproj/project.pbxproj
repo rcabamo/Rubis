@@ -17,7 +17,9 @@
 		4A605DF71A8F55DF005E1199 /* ApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A605DF61A8F55DF005E1199 /* ApplicationAssembly.m */; };
 		4A605DFA1A8F577B005E1199 /* TrainingListAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A605DF91A8F577B005E1199 /* TrainingListAssembly.m */; };
 		4A605DFD1A907DBF005E1199 /* RCMListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A605DFC1A907DBF005E1199 /* RCMListCollectionViewCell.m */; };
+		4A933CE31A961F10006C0BC2 /* DateListCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A933CE21A961F10006C0BC2 /* DateListCollectionFlowLayout.m */; };
 		4ACB4CF91A8F46D10086CAD9 /* RCMListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ACB4CF81A8F46D10086CAD9 /* RCMListViewController.storyboard */; };
+		4AE30C231A9CE5BC00DAC0D1 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE30C221A9CE5BC00DAC0D1 /* UIColor+Theme.m */; };
 		4AE562321A8F3949000C4EAA /* RCMListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE562301A8F3949000C4EAA /* RCMListViewController.m */; };
 		4AE562391A8F3993000C4EAA /* RCMListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE562381A8F3993000C4EAA /* RCMListPresenter.m */; };
 		4AE5623D1A8F3A49000C4EAA /* RCMTrainingListWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE5623C1A8F3A49000C4EAA /* RCMTrainingListWireframe.m */; };
@@ -57,7 +59,11 @@
 		4A605DF91A8F577B005E1199 /* TrainingListAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainingListAssembly.m; sourceTree = "<group>"; };
 		4A605DFB1A907DBF005E1199 /* RCMListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMListCollectionViewCell.h; sourceTree = "<group>"; };
 		4A605DFC1A907DBF005E1199 /* RCMListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMListCollectionViewCell.m; sourceTree = "<group>"; };
+		4A933CE11A961F10006C0BC2 /* DateListCollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateListCollectionFlowLayout.h; sourceTree = "<group>"; };
+		4A933CE21A961F10006C0BC2 /* DateListCollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateListCollectionFlowLayout.m; sourceTree = "<group>"; };
 		4ACB4CF81A8F46D10086CAD9 /* RCMListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RCMListViewController.storyboard; sourceTree = "<group>"; };
+		4AE30C211A9CE5BC00DAC0D1 /* UIColor+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Theme.h"; sourceTree = "<group>"; };
+		4AE30C221A9CE5BC00DAC0D1 /* UIColor+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Theme.m"; sourceTree = "<group>"; };
 		4AE5622F1A8F3949000C4EAA /* RCMListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMListViewController.h; sourceTree = "<group>"; };
 		4AE562301A8F3949000C4EAA /* RCMListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMListViewController.m; sourceTree = "<group>"; };
 		4AE562371A8F3993000C4EAA /* RCMListPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMListPresenter.h; sourceTree = "<group>"; };
@@ -166,6 +172,15 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		4AE30C201A9CE59700DAC0D1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4AE30C211A9CE5BC00DAC0D1 /* UIColor+Theme.h */,
+				4AE30C221A9CE5BC00DAC0D1 /* UIColor+Theme.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		4AE562101A8F2841000C4EAA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +193,7 @@
 		4AE562111A8F2853000C4EAA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4AE30C201A9CE59700DAC0D1 /* Categories */,
 				4AE5623E1A8F3CCF000C4EAA /* RCMRootWireframe.h */,
 				4AE5623F1A8F3CCF000C4EAA /* RCMRootWireframe.m */,
 			);
@@ -322,6 +338,8 @@
 				4ACB4CF81A8F46D10086CAD9 /* RCMListViewController.storyboard */,
 				4A605DFB1A907DBF005E1199 /* RCMListCollectionViewCell.h */,
 				4A605DFC1A907DBF005E1199 /* RCMListCollectionViewCell.m */,
+				4A933CE11A961F10006C0BC2 /* DateListCollectionFlowLayout.h */,
+				4A933CE21A961F10006C0BC2 /* DateListCollectionFlowLayout.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,7 +559,9 @@
 			files = (
 				4AE5623D1A8F3A49000C4EAA /* RCMTrainingListWireframe.m in Sources */,
 				4A605DFA1A8F577B005E1199 /* TrainingListAssembly.m in Sources */,
+				4AE30C231A9CE5BC00DAC0D1 /* UIColor+Theme.m in Sources */,
 				4AE562401A8F3CCF000C4EAA /* RCMRootWireframe.m in Sources */,
+				4A933CE31A961F10006C0BC2 /* DateListCollectionFlowLayout.m in Sources */,
 				4A605DF71A8F55DF005E1199 /* ApplicationAssembly.m in Sources */,
 				4A0BEA051A8CE4110046459B /* AppDelegate.m in Sources */,
 				4AE562391A8F3993000C4EAA /* RCMListPresenter.m in Sources */,
@@ -666,6 +686,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Rubis/Frameworks",
+					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
 				);
 				INFOPLIST_FILE = Rubis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -682,6 +703,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Rubis/Frameworks",
+					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
 				);
 				INFOPLIST_FILE = Rubis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
