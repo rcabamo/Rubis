@@ -17,6 +17,10 @@
 		4A605DF71A8F55DF005E1199 /* ApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A605DF61A8F55DF005E1199 /* ApplicationAssembly.m */; };
 		4A605DFA1A8F577B005E1199 /* TrainingListAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A605DF91A8F577B005E1199 /* TrainingListAssembly.m */; };
 		4A605DFD1A907DBF005E1199 /* RCMListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A605DFC1A907DBF005E1199 /* RCMListCollectionViewCell.m */; };
+		4A800EA21AA0D40300A73EC2 /* RCMTrainingAddWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A800EA11AA0D40300A73EC2 /* RCMTrainingAddWireframe.m */; };
+		4A800EA51AA0D42900A73EC2 /* RCMTrainingAddPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A800EA41AA0D42900A73EC2 /* RCMTrainingAddPresenter.m */; };
+		4A800EA81AA0D44100A73EC2 /* RCMTrainingAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A800EA71AA0D44100A73EC2 /* RCMTrainingAddViewController.m */; };
+		4A800EAA1AA0D45C00A73EC2 /* RCMTrainingAddViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A800EA91AA0D45C00A73EC2 /* RCMTrainingAddViewController.storyboard */; };
 		4A933CE31A961F10006C0BC2 /* DateListCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A933CE21A961F10006C0BC2 /* DateListCollectionFlowLayout.m */; };
 		4ACB4CF91A8F46D10086CAD9 /* RCMListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ACB4CF81A8F46D10086CAD9 /* RCMListViewController.storyboard */; };
 		4AE30C231A9CE5BC00DAC0D1 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE30C221A9CE5BC00DAC0D1 /* UIColor+Theme.m */; };
@@ -59,6 +63,13 @@
 		4A605DF91A8F577B005E1199 /* TrainingListAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainingListAssembly.m; sourceTree = "<group>"; };
 		4A605DFB1A907DBF005E1199 /* RCMListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMListCollectionViewCell.h; sourceTree = "<group>"; };
 		4A605DFC1A907DBF005E1199 /* RCMListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMListCollectionViewCell.m; sourceTree = "<group>"; };
+		4A800EA01AA0D40300A73EC2 /* RCMTrainingAddWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMTrainingAddWireframe.h; sourceTree = "<group>"; };
+		4A800EA11AA0D40300A73EC2 /* RCMTrainingAddWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMTrainingAddWireframe.m; sourceTree = "<group>"; };
+		4A800EA31AA0D42900A73EC2 /* RCMTrainingAddPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMTrainingAddPresenter.h; sourceTree = "<group>"; };
+		4A800EA41AA0D42900A73EC2 /* RCMTrainingAddPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMTrainingAddPresenter.m; sourceTree = "<group>"; };
+		4A800EA61AA0D44100A73EC2 /* RCMTrainingAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMTrainingAddViewController.h; sourceTree = "<group>"; };
+		4A800EA71AA0D44100A73EC2 /* RCMTrainingAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMTrainingAddViewController.m; sourceTree = "<group>"; };
+		4A800EA91AA0D45C00A73EC2 /* RCMTrainingAddViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RCMTrainingAddViewController.storyboard; sourceTree = "<group>"; };
 		4A933CE11A961F10006C0BC2 /* DateListCollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateListCollectionFlowLayout.h; sourceTree = "<group>"; };
 		4A933CE21A961F10006C0BC2 /* DateListCollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateListCollectionFlowLayout.m; sourceTree = "<group>"; };
 		4ACB4CF81A8F46D10086CAD9 /* RCMListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RCMListViewController.storyboard; sourceTree = "<group>"; };
@@ -243,9 +254,9 @@
 		4AE562171A8F292C000C4EAA /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				4AE5621A1A8F292C000C4EAA /* Wireframe */,
 				4AE562181A8F292C000C4EAA /* Presenter */,
 				4AE562191A8F292C000C4EAA /* View */,
-				4AE5621A1A8F292C000C4EAA /* Wireframe */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -253,6 +264,8 @@
 		4AE562181A8F292C000C4EAA /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				4A800EA31AA0D42900A73EC2 /* RCMTrainingAddPresenter.h */,
+				4A800EA41AA0D42900A73EC2 /* RCMTrainingAddPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -260,6 +273,9 @@
 		4AE562191A8F292C000C4EAA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4A800EA61AA0D44100A73EC2 /* RCMTrainingAddViewController.h */,
+				4A800EA71AA0D44100A73EC2 /* RCMTrainingAddViewController.m */,
+				4A800EA91AA0D45C00A73EC2 /* RCMTrainingAddViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +283,8 @@
 		4AE5621A1A8F292C000C4EAA /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				4A800EA01AA0D40300A73EC2 /* RCMTrainingAddWireframe.h */,
+				4A800EA11AA0D40300A73EC2 /* RCMTrainingAddWireframe.m */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -460,6 +478,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A800EAA1AA0D45C00A73EC2 /* RCMTrainingAddViewController.storyboard in Resources */,
 				4A0BEA101A8CE4110046459B /* LaunchScreen.xib in Resources */,
 				4ACB4CF91A8F46D10086CAD9 /* RCMListViewController.storyboard in Resources */,
 				4A0BEA0D1A8CE4110046459B /* Images.xcassets in Resources */,
@@ -558,8 +577,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AE5623D1A8F3A49000C4EAA /* RCMTrainingListWireframe.m in Sources */,
+				4A800EA21AA0D40300A73EC2 /* RCMTrainingAddWireframe.m in Sources */,
 				4A605DFA1A8F577B005E1199 /* TrainingListAssembly.m in Sources */,
+				4A800EA51AA0D42900A73EC2 /* RCMTrainingAddPresenter.m in Sources */,
 				4AE30C231A9CE5BC00DAC0D1 /* UIColor+Theme.m in Sources */,
+				4A800EA81AA0D44100A73EC2 /* RCMTrainingAddViewController.m in Sources */,
 				4AE562401A8F3CCF000C4EAA /* RCMRootWireframe.m in Sources */,
 				4A933CE31A961F10006C0BC2 /* DateListCollectionFlowLayout.m in Sources */,
 				4A605DF71A8F55DF005E1199 /* ApplicationAssembly.m in Sources */,
