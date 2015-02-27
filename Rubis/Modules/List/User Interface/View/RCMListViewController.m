@@ -12,11 +12,14 @@
 
 #import "UIColor+Theme.h"
 
-static int i = 0;
 NSInteger selectedIndex = 3;
 
 
-@interface RCMListViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface RCMListViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
+{
+    NSInteger listOffset;
+    NSInteger amountInitValue;
+}
 
 @property (nonatomic, weak) IBOutlet UICollectionView   *collectionView;
 //
@@ -27,6 +30,8 @@ NSInteger selectedIndex = 3;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    amountInitValue = 10;
     
     self.title = NSStringFromClass([self class]);
     self.navigationController.navigationBar.translucent = NO;
@@ -45,8 +50,8 @@ NSInteger selectedIndex = 3;
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-//    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:5 inSection:0]   atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+
+    [self updateCollectionViewPosition];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -58,14 +63,19 @@ NSInteger selectedIndex = 3;
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10 + i;
+    return amountInitValue + listOffset;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     RCMListCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([RCMListCollectionViewCell class]) forIndexPath:indexPath];
     
-    cell.date = nil;
+    NSInteger offset = indexPath.row - (amountInitValue+listOffset/2);
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:offset*24*60*60];
+    NSLog(@"date: %@", date);
+    
+    cell.date = date;
     
     return cell;
 }
@@ -75,20 +85,44 @@ NSInteger selectedIndex = 3;
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (scrollView.contentOffset.x + CGRectGetWidth(self.collectionView.frame) + 50 > scrollView.contentSize.width) {
+    if (scrollView.contentOffset.x + CGRectGetWidth(self.collectionView.frame) * 2 > scrollView.contentSize.width ||
+        scrollView.contentOffset.x < 75) {
         NSLog(@"Load new objects");
-        i += 5;
-        [self.collectionView reloadData];
+        listOffset += 20;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView reloadData];
+            
+            if (scrollView.contentOffset.x < 75) {
+                [self updateCollectionViewPosition];
+            }
+        });
     }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    NSArray *cells = self.collectionView.visibleCells;
-    
-    UICollectionViewCell *cell = cells[cells.count/2];
-    
-    [self.collectionView scrollToItemAtIndexPath:[self.collectionView indexPathForCell:cell] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+//    NSArray *cells = self.collectionView.visibleCells;
+//    
+//    UICollectionViewCell *cell = cells[cells.count/2];
+//    
+//    [self.collectionView scrollToItemAtIndexPath:[self.collectionView indexPathForCell:cell] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+}
+
+- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
+{
+    [self updateCollectionViewPosition];
+    return NO;
+}
+
+
+#pragma mark - Utils method
+
+- (void)updateCollectionViewPosition
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:(amountInitValue+listOffset)/2 inSection:0];
+        [self.collectionView scrollToItemAtIndexPath:indexPath   atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    });
 }
 
 @end
