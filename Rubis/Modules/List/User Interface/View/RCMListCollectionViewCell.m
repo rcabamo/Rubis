@@ -12,13 +12,24 @@
 
 #import <PureLayout/PureLayout.h>
 
+@interface RCMListCollectionViewCell ()
+
+@property (nonatomic, weak) IBOutlet UILabel *dateLabel;
+
+@end
+
 @implementation RCMListCollectionViewCell
 
 - (void)setDate:(NSDate *)date
 {
     _date = date;
     
-    [self updateUI];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"dd-MM-YYYY";
+    
+    self.dateLabel.text = [dateFormatter stringFromDate:date];
+    
+//    [self updateUI];
 }
 
 - (void)updateConstraints

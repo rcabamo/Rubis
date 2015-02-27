@@ -25,10 +25,27 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="116" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvl-Q3-WAz">
+                                                    <rect key="frame" x="0.0" y="24.5" width="116" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="fvl-Q3-WAz" secondAttribute="trailing" id="YiA-Nk-HuT"/>
+                                            <constraint firstAttribute="bottom" secondItem="fvl-Q3-WAz" secondAttribute="bottom" constant="8" id="pVC-hj-jlz"/>
+                                            <constraint firstItem="fvl-Q3-WAz" firstAttribute="leading" secondItem="vok-Z7-Fv8" secondAttribute="leading" id="ztZ-xR-gbF"/>
+                                        </constraints>
+                                        <size key="customSize" width="116" height="53"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="fvl-Q3-WAz" id="nbU-fQ-jE7"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
