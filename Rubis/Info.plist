@@ -40,6 +40,7 @@
 	<array>
 		<string>ApplicationAssembly</string>
 		<string>TrainingListAssembly</string>
+		<string>TrainingAddAssembly</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
