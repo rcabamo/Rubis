@@ -26,7 +26,7 @@
 - (id)trainingAddWireframe
 {
     return [TyphoonDefinition withClass:[RCMTrainingAddWireframe class] configuration:^(TyphoonDefinition *definition) {
-        [definition injectProperty:@selector(addPresenter) with:nil];
+        [definition injectProperty:@selector(addPresenter) with:[self addPresenter]];
         [definition injectProperty:@selector(rootWireframe) with:[self.applicationAssembly rootWireframe]];
         [definition injectProperty:@selector(addViewController) with:[self addViewController]];
     }];

@@ -29,4 +29,9 @@
     [self.rootWireframe showRootViewController:self.listViewController inWindow:window];
 }
 
+- (void)presentAddTrainingWireframeForDate:(NSDate *)date
+{
+    [self.addWireframe presentAddViewWithDate:date viewController:self.listViewController.navigationController];
+}
+
 @end

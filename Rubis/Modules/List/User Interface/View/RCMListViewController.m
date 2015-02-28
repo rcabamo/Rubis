@@ -8,6 +8,8 @@
 
 #import "RCMListViewController.h"
 
+#import "RCMListPresenter.h"
+
 #import "RCMListCollectionViewCell.h"
 
 #import "UIColor+Theme.h"
@@ -22,7 +24,9 @@ NSInteger selectedIndex = 3;
 }
 
 @property (nonatomic, weak) IBOutlet UICollectionView   *collectionView;
-//
+
+@property (nonatomic, strong) RCMListPresenter          *presenter;
+
 @end
 
 @implementation RCMListViewController
@@ -34,17 +38,8 @@ NSInteger selectedIndex = 3;
     amountInitValue = 10;
     
     self.title = NSStringFromClass([self class]);
-    self.navigationController.navigationBar.translucent = NO;
-    UINavigationBar *navigationBar = self.navigationController.navigationBar;
     
-    [navigationBar setBackgroundImage:[UIImage new]
-                       forBarPosition:UIBarPositionAny
-                           barMetrics:UIBarMetricsDefault];
-    
-    [navigationBar setShadowImage:[UIImage new]];
-    self.navigationController.navigationBar.barTintColor = [UIColor rb_blackColor];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor rb_redColor]};
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+    [self setupNavigationBar];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -57,6 +52,26 @@ NSInteger selectedIndex = 3;
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleDefault;
+}
+
+- (void)setupNavigationBar
+{
+    self.navigationController.navigationBar.translucent = NO;
+    UINavigationBar *navigationBar = self.navigationController.navigationBar;
+    
+    [navigationBar setBackgroundImage:[UIImage new]
+                       forBarPosition:UIBarPositionAny
+                           barMetrics:UIBarMetricsDefault];
+    
+    [navigationBar setShadowImage:[UIImage new]];
+    navigationBar.barTintColor = [UIColor rb_blackColor];
+    navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor rb_redColor]};
+    navigationBar.barStyle = UIBarStyleBlackTranslucent;
+    
+    // Add buttons
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addViewTapped:)];
+    
+    self.navigationItem.rightBarButtonItem = addButton;
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -112,6 +127,14 @@ NSInteger selectedIndex = 3;
 {
     [self updateCollectionViewPosition];
     return NO;
+}
+
+
+#pragma mark - Nav Actions
+
+- (void)addViewTapped:(id)sender
+{
+    [self.presenter openAddViewWithDate:[NSDate date]];
 }
 
 

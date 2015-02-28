@@ -14,12 +14,17 @@
 
 @interface RCMTrainingAddWireframe ()
 
-@property (nonatomic, strong) RCMTrainingAddPresenter       *listPresenter;
+@property (nonatomic, strong) RCMTrainingAddPresenter       *addPresenter;
 @property (nonatomic, strong) RCMRootWireframe              *rootWireframe;
-@property (nonatomic, strong) RCMTrainingAddViewController  *listViewController;
+@property (nonatomic, strong) RCMTrainingAddViewController  *addViewController;
 
 @end
 
 @implementation RCMTrainingAddWireframe
+
+- (void)presentAddViewWithDate:(NSDate *)date viewController:(UINavigationController *)viewController
+{
+    [viewController pushViewController:self.addViewController animated:YES];
+}
 
 @end

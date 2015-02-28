@@ -10,4 +10,6 @@
 
 @interface RCMListPresenter : NSObject
 
+- (void)openAddViewWithDate:(NSDate *)date;
+
 @end

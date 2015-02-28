@@ -11,6 +11,8 @@
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 
+#import "UIColor+Theme.h"
+
 #import "RCMTrainingListWireframe.h"
 
 @interface AppDelegate ()
@@ -27,7 +29,7 @@
     [Fabric with:@[CrashlyticsKit]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.tintColor = [UIColor darkGrayColor];
+    self.window.tintColor = [UIColor rb_redColor];
     
     [self.listWireframe presentListInterfaceFromWindow:self.window];
     

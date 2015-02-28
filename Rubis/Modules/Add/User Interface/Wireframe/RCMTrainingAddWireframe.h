@@ -6,8 +6,10 @@
 //  Copyright (c) 2015 Ricardo Caballero. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import UIKit;
 
 @interface RCMTrainingAddWireframe : NSObject
+
+- (void)presentAddViewWithDate:(NSDate *)date viewController:(UINavigationController *)viewController;
 
 @end

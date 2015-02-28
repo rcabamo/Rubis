@@ -8,7 +8,7 @@
 
 #import "TrainingListAssembly.h"
 #import "ApplicationAssembly.h"
-#import "TrainingAddAssembly.m"
+#import "TrainingAddAssembly.h"
 
 #import <Typhoon/Typhoon.h>
 
@@ -37,12 +37,19 @@
 
 - (id)listPresenter
 {
-    return [TyphoonDefinition withClass:[RCMListPresenter class]];
+    return [TyphoonDefinition withClass:[RCMListPresenter class] configuration:^(TyphoonDefinition *definition) {
+        [definition injectProperty:@selector(listWireframe) with:[self trainingListWireframe]];
+        [definition injectProperty:@selector(listViewController) with:[self listViewController]];
+    }];
 }
 
 - (id)listViewController
 {
-    return [TyphoonDefinition withFactory:[self listViewStoryboard] selector:@selector(instantiateInitialViewController)];
+    TyphoonDefinition *definition = [TyphoonDefinition withFactory:[self listViewStoryboard] selector:@selector(instantiateInitialViewController)];
+    
+    [definition injectProperty:@selector(presenter) with:[self listPresenter]];
+    
+    return definition;
 }
 
 - (id)listViewStoryboard
