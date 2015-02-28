@@ -8,6 +8,7 @@
 
 #import "TrainingListAssembly.h"
 #import "ApplicationAssembly.h"
+#import "TrainingAddAssembly.m"
 
 #import <Typhoon/Typhoon.h>
 
@@ -18,6 +19,7 @@
 @interface TrainingListAssembly ()
 
 @property (nonatomic, strong) ApplicationAssembly *applicationAssembly;
+@property (nonatomic, strong) TrainingAddAssembly *addAssembly;
 
 @end
 
@@ -26,8 +28,9 @@
 - (id)trainingListWireframe
 {
     return [TyphoonDefinition withClass:[RCMTrainingListWireframe class] configuration:^(TyphoonDefinition *definition) {
-        [definition injectProperty:@selector(listPresenter) with:nil];
         [definition injectProperty:@selector(rootWireframe) with:[self.applicationAssembly rootWireframe]];
+        [definition injectProperty:@selector(addWireframe) with:[self.addAssembly trainingAddWireframe]];
+        [definition injectProperty:@selector(listPresenter) with:nil];
         [definition injectProperty:@selector(listViewController) with:[self listViewController]];
     }];
 }
