@@ -11,8 +11,17 @@
 @interface UIColor (Theme)
 
 + (UIColor *)rb_redColor;
++ (UIColor *)rb_redDisabledColor; // #F0434E
+
 + (UIColor *)rb_blueColor;
++ (UIColor *)rb_blueDisabledColor; // #0091C7
+
 + (UIColor *)rb_orangeColor;
++ (UIColor *)rb_orangeDisabledColor; // #FAAF55
+
++ (UIColor *)rb_grayColor; // #959595
++ (UIColor *)rb_grayDisabledColor; // #888888
+
 + (UIColor *)rb_blackColor;
 
 @end
