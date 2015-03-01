@@ -29,6 +29,8 @@
 		4AE562391A8F3993000C4EAA /* RCMListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE562381A8F3993000C4EAA /* RCMListPresenter.m */; };
 		4AE5623D1A8F3A49000C4EAA /* RCMTrainingListWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE5623C1A8F3A49000C4EAA /* RCMTrainingListWireframe.m */; };
 		4AE562401A8F3CCF000C4EAA /* RCMRootWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE5623F1A8F3CCF000C4EAA /* RCMRootWireframe.m */; };
+		4AEFCBB51AA36BCF00C8C7C0 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFCBB41AA36BCF00C8C7C0 /* Workout.m */; };
+		4AEFCBB81AA36C2000C8C7C0 /* Training.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFCBB71AA36C2000C8C7C0 /* Training.m */; };
 		9A16227A89E3A382E5E98DBD /* libPods-RubisTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 598DEF1EC8CA53BC4CD064DD /* libPods-RubisTests.a */; };
 		9A775D93F2675E6E8298F69C /* libPods-Rubis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B36269811993EEB46872290 /* libPods-Rubis.a */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,10 @@
 		4AE5623C1A8F3A49000C4EAA /* RCMTrainingListWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMTrainingListWireframe.m; sourceTree = "<group>"; };
 		4AE5623E1A8F3CCF000C4EAA /* RCMRootWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMRootWireframe.h; sourceTree = "<group>"; };
 		4AE5623F1A8F3CCF000C4EAA /* RCMRootWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMRootWireframe.m; sourceTree = "<group>"; };
+		4AEFCBB31AA36BCF00C8C7C0 /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
+		4AEFCBB41AA36BCF00C8C7C0 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
+		4AEFCBB61AA36C2000C8C7C0 /* Training.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Training.h; sourceTree = "<group>"; };
+		4AEFCBB71AA36C2000C8C7C0 /* Training.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Training.m; sourceTree = "<group>"; };
 		4B25AF8E79D47DFAAA606208 /* Pods-RubisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RubisTests/Pods-RubisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		598DEF1EC8CA53BC4CD064DD /* libPods-RubisTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RubisTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26B2C3B08B7C33FBDEF29B4 /* Pods-Rubis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rubis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rubis/Pods-Rubis.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +215,8 @@
 		4AE562111A8F2853000C4EAA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4AEFCBB11AA36B1C00C8C7C0 /* Data Manager */,
+				4AEFCBB01AA36B0100C8C7C0 /* Interactors */,
 				4AE30C201A9CE59700DAC0D1 /* Categories */,
 				4AE5623E1A8F3CCF000C4EAA /* RCMRootWireframe.h */,
 				4AE5623F1A8F3CCF000C4EAA /* RCMRootWireframe.m */,
@@ -374,6 +382,32 @@
 				4AE5623C1A8F3A49000C4EAA /* RCMTrainingListWireframe.m */,
 			);
 			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		4AEFCBB01AA36B0100C8C7C0 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		4AEFCBB11AA36B1C00C8C7C0 /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4AEFCBB21AA36B5400C8C7C0 /* Models */,
+			);
+			path = "Data Manager";
+			sourceTree = "<group>";
+		};
+		4AEFCBB21AA36B5400C8C7C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4AEFCBB31AA36BCF00C8C7C0 /* Workout.h */,
+				4AEFCBB41AA36BCF00C8C7C0 /* Workout.m */,
+				4AEFCBB61AA36C2000C8C7C0 /* Training.h */,
+				4AEFCBB71AA36C2000C8C7C0 /* Training.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		529CB4F9B7758EB627C65293 /* Pods */ = {
@@ -594,8 +628,10 @@
 				4AE562391A8F3993000C4EAA /* RCMListPresenter.m in Sources */,
 				4A605DFD1A907DBF005E1199 /* RCMListCollectionViewCell.m in Sources */,
 				4A0BEA021A8CE4110046459B /* main.m in Sources */,
+				4AEFCBB81AA36C2000C8C7C0 /* Training.m in Sources */,
 				4AE562321A8F3949000C4EAA /* RCMListViewController.m in Sources */,
 				4A84F66A1AA220A8008A96A4 /* TrainingAddAssembly.m in Sources */,
+				4AEFCBB51AA36BCF00C8C7C0 /* Workout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

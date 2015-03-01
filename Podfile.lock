@@ -4,6 +4,9 @@ PODS:
   - libextobjc/RuntimeExtensions (HEAD based on 0.4.1)
   - OCMock (3.1.2)
   - PureLayout (2.0.5)
+  - Realm (0.90.6):
+    - Realm/Headers (= 0.90.6)
+  - Realm/Headers (0.90.6)
   - Reveal-iOS-SDK (1.5.1)
   - Typhoon (2.3.4):
     - Typhoon/no-arc (= 2.3.4)
@@ -13,6 +16,7 @@ DEPENDENCIES:
   - libextobjc/EXTScope (HEAD)
   - OCMock (~> 3.1.2)
   - PureLayout (~> 2.0.5)
+  - Realm (~> 0.90.6)
   - Reveal-iOS-SDK
   - Typhoon (~> 2.3.4)
 
@@ -20,6 +24,7 @@ SPEC CHECKSUMS:
   libextobjc: d6146fce3ebea986b7f75fcb4c967639200b88b0
   OCMock: ecdd510b73ef397f2f97274785c1e87fd147c49f
   PureLayout: 63a3257320223e8edddcd3afb407445f85a6bf74
+  Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
   Reveal-iOS-SDK: dcfeb671c7da222c85f18f866da2ce88de075524
   Typhoon: 57aae183beb36a386017a2cc69b18e29d7a21730
 

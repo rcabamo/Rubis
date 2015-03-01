@@ -7,6 +7,7 @@ target 'Rubis' do
     pod 'Typhoon', '~> 2.3.4'
 	pod 'Reveal-iOS-SDK', :configuration => :debug
     pod 'PureLayout', '~> 2.0.5'
+    pod 'Realm', '~> 0.90.6'
 end
 
 target 'RubisTests' do
