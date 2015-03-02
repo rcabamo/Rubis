@@ -1,10 +1,10 @@
 CLANG_CXX_LANGUAGE_STANDARD = compiler-default
 FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/Reveal-iOS-SDK/Reveal-Framework-1.5.1"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/OCMock" "${PODS_ROOT}/Headers/Public/PureLayout" "${PODS_ROOT}/Headers/Public/Realm" "${PODS_ROOT}/Headers/Public/Realm/Realm" "${PODS_ROOT}/Headers/Public/Reveal-iOS-SDK" "${PODS_ROOT}/Headers/Public/Typhoon" "${PODS_ROOT}/Headers/Public/libextobjc"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/OCMock" "${PODS_ROOT}/Headers/Public/PureLayout" "${PODS_ROOT}/Headers/Public/Realm" "${PODS_ROOT}/Headers/Public/Realm/Realm" "${PODS_ROOT}/Headers/Public/Reveal-iOS-SDK" "${PODS_ROOT}/Headers/Public/TKRoundedView" "${PODS_ROOT}/Headers/Public/Typhoon" "${PODS_ROOT}/Headers/Public/libextobjc"
 LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/Realm/core"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/OCMock" -isystem "${PODS_ROOT}/Headers/Public/PureLayout" -isystem "${PODS_ROOT}/Headers/Public/Realm" -isystem "${PODS_ROOT}/Headers/Public/Realm/Realm" -isystem "${PODS_ROOT}/Headers/Public/Reveal-iOS-SDK" -isystem "${PODS_ROOT}/Headers/Public/Typhoon" -isystem "${PODS_ROOT}/Headers/Public/libextobjc"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/OCMock" -isystem "${PODS_ROOT}/Headers/Public/PureLayout" -isystem "${PODS_ROOT}/Headers/Public/Realm" -isystem "${PODS_ROOT}/Headers/Public/Realm/Realm" -isystem "${PODS_ROOT}/Headers/Public/Reveal-iOS-SDK" -isystem "${PODS_ROOT}/Headers/Public/TKRoundedView" -isystem "${PODS_ROOT}/Headers/Public/Typhoon" -isystem "${PODS_ROOT}/Headers/Public/libextobjc"
 OTHER_CPLUSPLUSFLAGS = -std=c++1y $(inherited) -std=c++1y $(inherited)
-OTHER_LDFLAGS = -ObjC -l"Pods-Rubis-PureLayout" -l"Pods-Rubis-Realm" -l"Pods-Rubis-Reveal-iOS-SDK" -l"Pods-Rubis-Typhoon" -l"Pods-Rubis-libextobjc" -l"c++" -l"tightdb-ios" -l"z" -framework "CFNetwork" -framework "CoreGraphics" -framework "QuartzCore" -framework "Reveal"
+OTHER_LDFLAGS = -ObjC -l"Pods-Rubis-PureLayout" -l"Pods-Rubis-Realm" -l"Pods-Rubis-Reveal-iOS-SDK" -l"Pods-Rubis-TKRoundedView" -l"Pods-Rubis-Typhoon" -l"Pods-Rubis-libextobjc" -l"c++" -l"tightdb-ios" -l"z" -framework "CFNetwork" -framework "CoreGraphics" -framework "QuartzCore" -framework "Reveal"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

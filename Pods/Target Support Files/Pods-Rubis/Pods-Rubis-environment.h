@@ -24,6 +24,12 @@
 #define COCOAPODS_VERSION_MINOR_Realm_Headers 90
 #define COCOAPODS_VERSION_PATCH_Realm_Headers 6
 
+// TKRoundedView
+#define COCOAPODS_POD_AVAILABLE_TKRoundedView
+#define COCOAPODS_VERSION_MAJOR_TKRoundedView 0
+#define COCOAPODS_VERSION_MINOR_TKRoundedView 5
+#define COCOAPODS_VERSION_PATCH_TKRoundedView 0
+
 // Typhoon
 #define COCOAPODS_POD_AVAILABLE_Typhoon
 #define COCOAPODS_VERSION_MAJOR_Typhoon 2

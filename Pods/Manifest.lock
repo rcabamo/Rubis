@@ -8,6 +8,7 @@ PODS:
     - Realm/Headers (= 0.90.6)
   - Realm/Headers (0.90.6)
   - Reveal-iOS-SDK (1.5.1)
+  - TKRoundedView (0.5)
   - Typhoon (2.3.4):
     - Typhoon/no-arc (= 2.3.4)
   - Typhoon/no-arc (2.3.4)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - PureLayout (~> 2.0.5)
   - Realm (~> 0.90.6)
   - Reveal-iOS-SDK
+  - TKRoundedView (~> 0.5)
   - Typhoon (~> 2.3.4)
 
 SPEC CHECKSUMS:
@@ -26,6 +28,7 @@ SPEC CHECKSUMS:
   PureLayout: 63a3257320223e8edddcd3afb407445f85a6bf74
   Realm: 6c3facc11964ab9f828f47de6d0e9bf9c4d9c818
   Reveal-iOS-SDK: dcfeb671c7da222c85f18f866da2ce88de075524
+  TKRoundedView: 96b0bc35762a0a7f2d397f353498c6563d899bb1
   Typhoon: 57aae183beb36a386017a2cc69b18e29d7a21730
 
 COCOAPODS: 0.35.0
