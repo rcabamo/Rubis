@@ -11,7 +11,7 @@
 
 @interface RCMTrainingListWireframe : NSObject
 
-- (void)presentListInterfaceFromWindow:(UIWindow *)window;
 - (void)presentAddTrainingWireframeForDate:(NSDate *)date;
+- (void)presentListViewWithviewController:(UIViewController *)viewController;
 
 @end

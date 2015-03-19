@@ -8,14 +8,14 @@
 
 #import "ApplicationAssembly.h"
 
-#import "TrainingListAssembly.h"
+#import "HomeAssembly.h"
 
 #import "AppDelegate.h"
 #import "RCMRootWireframe.h"
 
 @interface ApplicationAssembly ()
 
-@property (nonatomic, strong) TrainingListAssembly* trainingListAssembly;
+@property (nonatomic, strong) HomeAssembly* homeAssembly;
 
 @end
 
@@ -24,7 +24,7 @@
 - (id)appDelegate
 {
     return [TyphoonDefinition withClass:[AppDelegate class] configuration:^(TyphoonDefinition *definition) {
-        [definition injectProperty:@selector(listWireframe) with:[self.trainingListAssembly trainingListWireframe]];
+        [definition injectProperty:@selector(homeWireframe) with:[self.homeAssembly homeWireframe]];
     }];
 }
 

@@ -24,14 +24,14 @@
 
 @implementation RCMTrainingListWireframe
 
-- (void)presentListInterfaceFromWindow:(UIWindow *)window
-{
-    [self.rootWireframe showRootViewController:self.listViewController inWindow:window];
-}
-
 - (void)presentAddTrainingWireframeForDate:(NSDate *)date
 {
     [self.addWireframe presentAddViewWithDate:date viewController:self.listViewController.navigationController];
+}
+
+- (void)presentListViewWithviewController:(UIViewController *)viewController
+{
+    [viewController.navigationController pushViewController:self.listViewController animated:YES];
 }
 
 @end

@@ -22,6 +22,11 @@
 		4A800EA81AA0D44100A73EC2 /* RCMTrainingAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A800EA71AA0D44100A73EC2 /* RCMTrainingAddViewController.m */; };
 		4A800EAA1AA0D45C00A73EC2 /* RCMTrainingAddViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A800EA91AA0D45C00A73EC2 /* RCMTrainingAddViewController.storyboard */; };
 		4A84F66A1AA220A8008A96A4 /* TrainingAddAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A84F6691AA220A8008A96A4 /* TrainingAddAssembly.m */; };
+		4A8F5A901ABB5A6500879FB2 /* RCMHomeWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8F5A8F1ABB5A6500879FB2 /* RCMHomeWireframe.m */; };
+		4A8F5A931ABB5A7800879FB2 /* RCMHomePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8F5A921ABB5A7800879FB2 /* RCMHomePresenter.m */; };
+		4A8F5A961ABB5A8B00879FB2 /* RCMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8F5A951ABB5A8B00879FB2 /* RCMHomeViewController.m */; };
+		4A8F5A981ABB5AA200879FB2 /* RCMHomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A8F5A971ABB5AA200879FB2 /* RCMHomeViewController.storyboard */; };
+		4A8F5A9B1ABB5AC000879FB2 /* HomeAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8F5A9A1ABB5AC000879FB2 /* HomeAssembly.m */; };
 		4A933CE31A961F10006C0BC2 /* DateListCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A933CE21A961F10006C0BC2 /* DateListCollectionFlowLayout.m */; };
 		4ACB4CF91A8F46D10086CAD9 /* RCMListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ACB4CF81A8F46D10086CAD9 /* RCMListViewController.storyboard */; };
 		4AE30C231A9CE5BC00DAC0D1 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE30C221A9CE5BC00DAC0D1 /* UIColor+Theme.m */; };
@@ -75,6 +80,15 @@
 		4A800EA91AA0D45C00A73EC2 /* RCMTrainingAddViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RCMTrainingAddViewController.storyboard; sourceTree = "<group>"; };
 		4A84F6681AA220A8008A96A4 /* TrainingAddAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainingAddAssembly.h; sourceTree = "<group>"; };
 		4A84F6691AA220A8008A96A4 /* TrainingAddAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainingAddAssembly.m; sourceTree = "<group>"; };
+		4A8F5A8E1ABB5A6500879FB2 /* RCMHomeWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMHomeWireframe.h; sourceTree = "<group>"; };
+		4A8F5A8F1ABB5A6500879FB2 /* RCMHomeWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMHomeWireframe.m; sourceTree = "<group>"; };
+		4A8F5A911ABB5A7800879FB2 /* RCMHomePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMHomePresenter.h; sourceTree = "<group>"; };
+		4A8F5A921ABB5A7800879FB2 /* RCMHomePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMHomePresenter.m; sourceTree = "<group>"; };
+		4A8F5A941ABB5A8B00879FB2 /* RCMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMHomeViewController.h; sourceTree = "<group>"; };
+		4A8F5A951ABB5A8B00879FB2 /* RCMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMHomeViewController.m; sourceTree = "<group>"; };
+		4A8F5A971ABB5AA200879FB2 /* RCMHomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RCMHomeViewController.storyboard; sourceTree = "<group>"; };
+		4A8F5A991ABB5AC000879FB2 /* HomeAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeAssembly.h; sourceTree = "<group>"; };
+		4A8F5A9A1ABB5AC000879FB2 /* HomeAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeAssembly.m; sourceTree = "<group>"; };
 		4A933CE11A961F10006C0BC2 /* DateListCollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateListCollectionFlowLayout.h; sourceTree = "<group>"; };
 		4A933CE21A961F10006C0BC2 /* DateListCollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateListCollectionFlowLayout.m; sourceTree = "<group>"; };
 		4ACB4CF81A8F46D10086CAD9 /* RCMListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RCMListViewController.storyboard; sourceTree = "<group>"; };
@@ -190,8 +204,56 @@
 				4A605DF91A8F577B005E1199 /* TrainingListAssembly.m */,
 				4A84F6681AA220A8008A96A4 /* TrainingAddAssembly.h */,
 				4A84F6691AA220A8008A96A4 /* TrainingAddAssembly.m */,
+				4A8F5A991ABB5AC000879FB2 /* HomeAssembly.h */,
+				4A8F5A9A1ABB5AC000879FB2 /* HomeAssembly.m */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		4A8F5A891ABB59A900879FB2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4A8F5A8A1ABB59CA00879FB2 /* User Interface */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4A8F5A8A1ABB59CA00879FB2 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4A8F5A8B1ABB59E100879FB2 /* Wireframe */,
+				4A8F5A8C1ABB59F200879FB2 /* Presenter */,
+				4A8F5A8D1ABB59FA00879FB2 /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		4A8F5A8B1ABB59E100879FB2 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				4A8F5A8E1ABB5A6500879FB2 /* RCMHomeWireframe.h */,
+				4A8F5A8F1ABB5A6500879FB2 /* RCMHomeWireframe.m */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		4A8F5A8C1ABB59F200879FB2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4A8F5A911ABB5A7800879FB2 /* RCMHomePresenter.h */,
+				4A8F5A921ABB5A7800879FB2 /* RCMHomePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4A8F5A8D1ABB59FA00879FB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A8F5A941ABB5A8B00879FB2 /* RCMHomeViewController.h */,
+				4A8F5A951ABB5A8B00879FB2 /* RCMHomeViewController.m */,
+				4A8F5A971ABB5AA200879FB2 /* RCMHomeViewController.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4AE30C201A9CE59700DAC0D1 /* Categories */ = {
@@ -206,6 +268,7 @@
 		4AE562101A8F2841000C4EAA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4A8F5A891ABB59A900879FB2 /* Home */,
 				4AE562121A8F292C000C4EAA /* Add */,
 				4AE5621B1A8F292C000C4EAA /* List */,
 			);
@@ -521,6 +584,7 @@
 				4A0BEA101A8CE4110046459B /* LaunchScreen.xib in Resources */,
 				4ACB4CF91A8F46D10086CAD9 /* RCMListViewController.storyboard in Resources */,
 				4A0BEA0D1A8CE4110046459B /* Images.xcassets in Resources */,
+				4A8F5A981ABB5AA200879FB2 /* RCMHomeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,20 +679,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8F5A961ABB5A8B00879FB2 /* RCMHomeViewController.m in Sources */,
 				4AE5623D1A8F3A49000C4EAA /* RCMTrainingListWireframe.m in Sources */,
 				4A800EA21AA0D40300A73EC2 /* RCMTrainingAddWireframe.m in Sources */,
 				4A605DFA1A8F577B005E1199 /* TrainingListAssembly.m in Sources */,
 				4A800EA51AA0D42900A73EC2 /* RCMTrainingAddPresenter.m in Sources */,
 				4AE30C231A9CE5BC00DAC0D1 /* UIColor+Theme.m in Sources */,
 				4A800EA81AA0D44100A73EC2 /* RCMTrainingAddViewController.m in Sources */,
+				4A8F5A931ABB5A7800879FB2 /* RCMHomePresenter.m in Sources */,
 				4AE562401A8F3CCF000C4EAA /* RCMRootWireframe.m in Sources */,
 				4A933CE31A961F10006C0BC2 /* DateListCollectionFlowLayout.m in Sources */,
 				4A605DF71A8F55DF005E1199 /* ApplicationAssembly.m in Sources */,
+				4A8F5A9B1ABB5AC000879FB2 /* HomeAssembly.m in Sources */,
 				4A0BEA051A8CE4110046459B /* AppDelegate.m in Sources */,
 				4AE562391A8F3993000C4EAA /* RCMListPresenter.m in Sources */,
 				4A605DFD1A907DBF005E1199 /* RCMListCollectionViewCell.m in Sources */,
 				4A0BEA021A8CE4110046459B /* main.m in Sources */,
 				4AEFCBB81AA36C2000C8C7C0 /* Training.m in Sources */,
+				4A8F5A901ABB5A6500879FB2 /* RCMHomeWireframe.m in Sources */,
 				4AE562321A8F3949000C4EAA /* RCMListViewController.m in Sources */,
 				4A84F66A1AA220A8008A96A4 /* TrainingAddAssembly.m in Sources */,
 				4AEFCBB51AA36BCF00C8C7C0 /* Workout.m in Sources */,

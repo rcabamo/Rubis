@@ -13,7 +13,7 @@
 
 #import "UIColor+Theme.h"
 
-#import "RCMTrainingListWireframe.h"
+#import "RCMHomeWireframe.h"
 
 @interface AppDelegate ()
 
@@ -31,7 +31,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.tintColor = [UIColor rb_redColor];
     
-    [self.listWireframe presentListInterfaceFromWindow:self.window];
+    [self.homeWireframe presentHomeInterfaceFromWindow:self.window];
     
     [self.window makeKeyAndVisible];
     

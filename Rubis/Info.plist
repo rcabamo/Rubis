@@ -39,6 +39,7 @@
 	<key>TyphoonInitialAssemblies</key>
 	<array>
 		<string>ApplicationAssembly</string>
+		<string>HomeAssembly</string>
 		<string>TrainingListAssembly</string>
 		<string>TrainingAddAssembly</string>
 	</array>

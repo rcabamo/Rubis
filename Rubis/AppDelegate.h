@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class RCMTrainingListWireframe;
+@class RCMHomeWireframe;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic, strong) RCMTrainingListWireframe *listWireframe;
+@property (nonatomic, strong) RCMHomeWireframe *homeWireframe;
 
 @end
 
