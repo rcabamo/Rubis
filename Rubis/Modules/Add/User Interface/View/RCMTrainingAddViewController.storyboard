@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wkZ-OJ-MmX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wkZ-OJ-MmX">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Training Add View Controller-->
@@ -62,7 +62,7 @@
                                         <rect key="frame" x="160" y="404" width="160" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KILOMETERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woa-Jp-jIB">
-                                                <rect key="frame" x="27" y="14.5" width="107" height="20.5"/>
+                                                <rect key="frame" x="27" y="14" width="107" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.96470588239999999" green="0.95686274510000002" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -74,14 +74,57 @@
                                             <constraint firstAttribute="centerY" secondItem="woa-Jp-jIB" secondAttribute="centerY" id="puE-iG-9w9"/>
                                         </constraints>
                                     </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oP-pF-Bdi">
+                                        <rect key="frame" x="15" y="289" width="290" height="85"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="85" id="3QY-Sl-tUH"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REx-Hv-8p2">
+                                        <rect key="frame" x="125" y="121" width="71" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="miles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7X-Sz-7Cx">
+                                        <rect key="frame" x="207" y="112" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="km" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbD-bl-RIt">
+                                        <rect key="frame" x="207" y="141" width="24" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmF-Sp-c0d">
+                                        <rect key="frame" x="145" y="56" width="30" height="30"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QG0-GO-ea1">
+                                        <rect key="frame" x="145" y="194" width="30" height="30"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="4Sg-rq-okB" firstAttribute="width" secondItem="n17-Ma-p5W" secondAttribute="width" id="07L-gA-TEU"/>
                                     <constraint firstAttribute="bottom" secondItem="4Sg-rq-okB" secondAttribute="bottom" id="Dys-hY-2YT"/>
+                                    <constraint firstAttribute="trailing" secondItem="4oP-pF-Bdi" secondAttribute="trailing" constant="15" id="F7E-by-8Bf"/>
                                     <constraint firstItem="4Sg-rq-okB" firstAttribute="height" secondItem="n17-Ma-p5W" secondAttribute="height" id="KPe-6P-Wpw"/>
+                                    <constraint firstItem="4Sg-rq-okB" firstAttribute="top" secondItem="4oP-pF-Bdi" secondAttribute="bottom" constant="30" id="Nuk-Xa-2xi"/>
                                     <constraint firstItem="4Sg-rq-okB" firstAttribute="leading" secondItem="n17-Ma-p5W" secondAttribute="trailing" id="RHZ-UX-cZm"/>
                                     <constraint firstItem="n17-Ma-p5W" firstAttribute="leading" secondItem="tJX-ln-mBG" secondAttribute="leading" id="UqX-Ls-eP9"/>
+                                    <constraint firstItem="4oP-pF-Bdi" firstAttribute="leading" secondItem="tJX-ln-mBG" secondAttribute="leading" constant="15" id="cJ9-0r-Amw"/>
                                     <constraint firstItem="4Sg-rq-okB" firstAttribute="leading" secondItem="n17-Ma-p5W" secondAttribute="trailing" id="inK-rd-uza"/>
                                     <constraint firstAttribute="bottom" secondItem="n17-Ma-p5W" secondAttribute="bottom" id="xxA-MP-eSk"/>
                                     <constraint firstAttribute="trailing" secondItem="4Sg-rq-okB" secondAttribute="trailing" id="y3f-sm-1tz"/>
@@ -99,7 +142,11 @@
                             <constraint firstItem="tJX-ln-mBG" firstAttribute="leading" secondItem="3rf-1T-le5" secondAttribute="leading" id="xW3-xG-7iU"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="Se7-JZ-bfH"/>
+                    </toolbarItems>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="containerView" destination="tJX-ln-mBG" id="nRY-Tl-K5I"/>
